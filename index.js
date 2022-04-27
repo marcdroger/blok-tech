@@ -5,9 +5,6 @@ const port = 3000;
 //use static public directory
 app.use(express.static('public'))
 
-//use css directory
-app.use(express.static('css'))
-
 //set templating engine to pug
 app.set('view engine', 'pug')
 

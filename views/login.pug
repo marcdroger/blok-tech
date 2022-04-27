@@ -1,8 +1,6 @@
-doctype html
-html
-  head
-    title Login
-  body
-    h1 please login
-    input(type='text' name='username' placeholder='username')
-    input(type='password' name='password' placeholder='password')
+extends layout/template.pug
+
+block content
+  h1 please login
+  input(type='text' name='username' placeholder='username')
+  input(type='password' name='password' placeholder='password')
