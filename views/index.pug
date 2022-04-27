@@ -2,3 +2,10 @@ extends layout/template.pug
 
 block content
   h1 Hello world
+
+  //- temporary conditional for pug
+  - var age = 22
+  if age >= 18
+    p you can drink some fine beer my dude 
+  else
+    p you still drink some beer but do it in secret
