@@ -9,3 +9,13 @@ block content
     p you can drink some fine beer my dude 
   else
     p you still drink some beer but do it in secret
+
+  //- temporary mixin
+  mixin list(hobby)
+    li= hobby
+
+  p Hobbies:
+  ul
+    +list('lezen')
+    +list('coderen')
+    +list('BBQ met vrienden')
