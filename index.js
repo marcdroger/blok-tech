@@ -5,11 +5,22 @@ const port = 3000;
 app.use(express.static('public'))
 app.set('view engine', 'pug')
 
-app.get('/', (res) => {
+//render index page
+app.get('/', (req, res) => {
   res.render('index');
 })
 
-app.use((res) => {
+//render about page
+app.get('/about', (req, res) => {
+  res.render('about');
+})
+
+app.get('/login', (req, res) => {
+  res.render('login');
+})
+
+//render 404 page
+app.use((req, res) => {
   res.status(404).render('404');
 })
 
