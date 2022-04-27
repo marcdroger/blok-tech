@@ -1,0 +1,11 @@
+header {
+  text-align: center;
+  padding: 15px 0;
+
+  /* based on nav height */
+  margin-top: 48px;
+}
+
+header h1 {
+  margin: 10px 0;
+}

@@ -1,0 +1,13 @@
+nav {
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+  position: fixed;
+  background-color: aliceblue;
+  width: 100%;
+}
+
+nav ul {
+  justify-content: space-around;
+  display: flex;
+}
