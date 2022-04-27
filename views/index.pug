@@ -12,11 +12,13 @@ block content
       p you still drink some beer but do it in secret
 
     //- temporary mixin
-    mixin list(hobby)
-      li= hobby
+    mixin list(item)
+      ul
+        for movie in favoriteMovies
+          li= movie
 
-    p Hobbies:
-    ul
-      +list('lezen')
-      +list('coderen')
-      +list('BBQ met vrienden')
+    //- temporary linebreaks html
+    br
+    p Favorite movies:
+    br
+    +list
