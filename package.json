@@ -1,0 +1,17 @@
+{
+  "name": "blok-tech",
+  "description": "Blok Tech repo for CMD Tech at HvA",
+  "version": "0.0.1",
+  "author": "Marc Droger",
+  "repository": "marcdroger/blok-tech",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "express": "^4.18.0",
+    "nodemon": "^2.0.15"
+  }
+}
