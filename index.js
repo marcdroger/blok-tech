@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+//use static public directory
 app.use(express.static('public'))
+
+//set templating engine to pug
 app.set('view engine', 'pug')
 
 //render index page
