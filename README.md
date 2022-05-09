@@ -1,24 +1,18 @@
 # blok-tech
 
 Project Tech voor CMD HvA.
+Dit project bevat een matching applicatie voor het web gebaseerd op Node.
 
-Het project is een matching applicatie voor het web gebaseerd op Node.
+## Setup project
 
-## Concept idea's
+To run this project locally you need to have Node and NPM installed.
 
-### Ingredienten match app
+```bash
+# install dependencies
+$ npm install
 
-Makkelijk checken of je met je overgebleven gerechten
-nog een heerlijke maaltijd kan maken.
+# run project locally at localhost:3000
+$ npm start
+```
 
-### Kleding match app
-
-Heb je een leuke hoodie maar geen idee wat er goed bij
-past? Ontdek welke broek/schoenen of wat dan ook het beste
-bij de outfit past.
-
-### Student exchange
-
-Studeren in het buitenland maar kan je geen uitwisselingsproject vinden? Zoek naar studenten die in
-jouw land en op jouw hogeschool willen studeren. Vul
-je gegevens in en zoek de perfecte uitwisselings kandidaat.
+project is still under development so the readme can be updated in the feature
