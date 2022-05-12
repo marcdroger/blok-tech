@@ -1,0 +1,16 @@
+.account {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.account input,
+.account select {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.account label {
+  margin-top: 2px;
+}

@@ -16,13 +16,9 @@ app.get('/', (req, res) => {
   });
 })
 
-//render about page
-app.get('/about', (req, res) => {
-  res.render('about');
-})
-
-app.get('/login', (req, res) => {
-  res.render('login');
+//render account page
+app.get('/account', (req, res) => {
+  res.render('account');
 })
 
 //render 404 page

@@ -9,6 +9,7 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "dotenv": "^16.0.1",
     "pug": "^3.0.2"
   },
   "devDependencies": {
