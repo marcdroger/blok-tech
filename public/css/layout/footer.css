@@ -1,0 +1,9 @@
+footer {
+  text-align: center;
+  margin: 20px 0;
+}
+
+footer a {
+  color: var(--color-black);
+  text-decoration: underline;
+}

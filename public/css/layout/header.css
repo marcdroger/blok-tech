@@ -1,7 +1,7 @@
 header {
   background-color: var(--color-black);
   text-align: center;
-  padding: 100px 0 40px;
+  padding: 120px 0 50px;
 }
 
 header h1 {
@@ -11,5 +11,7 @@ header h1 {
 
 /* FIXME: place main in different css file */
 main {
-  margin-top: 30px;
+  margin: 30px auto 0;
+  max-width: 1200px;
+  padding: 0 16px;
 }
