@@ -1,7 +1,7 @@
 .account {
   display: flex;
   flex-direction: column;
-  width: 30rem;
+  width: 300px;
   margin: 0 auto;
 }
 

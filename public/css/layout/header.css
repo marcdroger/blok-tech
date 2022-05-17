@@ -1,11 +1,15 @@
 header {
+  background-color: var(--color-black);
   text-align: center;
-  padding: 15px 0;
-
-  /* based on nav height */
-  margin-top: 48px;
+  padding: 100px 0 40px;
 }
 
 header h1 {
+  color: var(--color-white);
   margin: 10px 0;
+}
+
+/* FIXME: place main in different css file */
+main {
+  margin-top: 30px;
 }

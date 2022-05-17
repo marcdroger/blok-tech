@@ -1,0 +1,26 @@
+input[type='text'],
+input[type='password'],
+select {
+  border: 2px solid var(--color-black);
+  padding: 8px;
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+input[type='submit'] {
+  border: none;
+  background-color: var(--color-black);
+  padding: 15px 25px;
+  color: var(--color-white);
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+/* avatar */
+form img {
+  border-radius: 100%;
+  width: 125px;
+  height: 125px;
+  margin: 0 auto 20px;
+  object-fit: cover;
+}
