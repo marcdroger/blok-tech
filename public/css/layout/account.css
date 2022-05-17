@@ -5,6 +5,14 @@
   margin: 0 auto;
 }
 
+.account h2 {
+  margin-top: 10px;
+}
+
+.account hr {
+  margin-bottom: 8px;
+}
+
 .account input,
 .account select {
   margin-bottom: 10px;
