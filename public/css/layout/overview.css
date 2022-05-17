@@ -1,0 +1,47 @@
+.overview {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.overview li {
+  padding: 18px 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.overview h2 {
+  overflow-wrap: break-word;
+  text-transform: capitalize;
+  margin: 8px 0;
+}
+
+.overview div p:last-child {
+  color: var(--color-gray);
+}
+
+.overview li > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.overview div:last-child {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.overview div img {
+  width: 32px;
+}
+
+.overview div a:first-child img {
+  margin-right: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .overview li {
+    width: 25%;
+  }
+}

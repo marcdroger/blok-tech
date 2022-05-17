@@ -9,7 +9,11 @@ header h1 {
   margin: 10px 0;
 }
 
-/* FIXME: place main in different css file */
+header p {
+  color: var(--color-white);
+}
+
+/* FIXME: place main in different css file? */
 main {
   margin: 30px auto 0;
   max-width: 1200px;
