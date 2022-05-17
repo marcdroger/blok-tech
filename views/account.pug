@@ -7,16 +7,27 @@ block content
     form.account(action='')
       img(src='./images/avatar.jpg' alt='avatar name')
       input(type='file' name='image' id='image' accept='image/*')
+      h2 General Info
+      hr
       label(for='firstname') First Name
       input(type='text' name='firstname' id='firstname')
       label(for='lastname') Last name
       input(type='text' placeholder='' name='lastname' id='lastname')
-      label(for='education') Currently studying
+      h2 Education
+      hr
+      label(for='education') Current study
       input(type='text' placeholder='' name='education' id='education')
       label(for='school') Current School
-      input(type='text' placeholder='' name='school' id='school') 
-      label(for='country') Country preference
+      select(id='school')
+        option(name='' value='') School
+      label(for='country') School preference
       select(id='country')
         option(name='' value='') country
+      h2 Contact
+      hr
+      label(for='linkedin') LinkedIn Link
+      input(type='text' placeholder='' name='linkedin' id='linkedin') 
+      label(for='instagram') Instagram Link
+      input(type='text' placeholder='' name='instagram' id='instagram') 
 
-      input(type='submit' value='update account')
+      input(type='submit' value='update Info')
