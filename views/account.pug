@@ -7,7 +7,6 @@ block content
     form.account(action='/account' method='post' enctype='multipart/form-data')
       img(src='./images/avatar.jpg' alt='avatar name')
       input(type='file' name='avatar' accept='image/*')
-      //- TODO: make avatar different form?
       h2 General Info
       hr
       label(for='firstname') First Name
@@ -20,18 +19,18 @@ block content
       input(type='text' placeholder='' name='education' id='education' required)
       label(for='school') Current School
       select(name='school' id='school')
-        option(value='ha') Harvard University
-        option(value='hr') Hogeschool van Rotterdam
-        option(value='hva') Hogeschool van Amsterdam
-        option(value='ku') Kyoto University
-        option(value='uot') University of Toronto
+        option(value='Harvard University') Harvard University
+        option(value='Hogeschool van Rotterdam') Hogeschool van Rotterdam
+        option(value='Hogeschool van Amsterdam') Hogeschool van Amsterdam
+        option(value='Kyoto University') Kyoto University
+        option(value='University of Toronto') University of Toronto
       label(for='country') Country preference
       select(name='country' id='country')
-        option(value='ca') Canada
-        option(value='eng') England
-        option(value='jp') Japan
-        option(value='nl') Netherlands
-        option(value='usa') United States
+        option(value='Canada') Canada
+        option(value='England') England
+        option(value='Japan') Japan
+        option(value='Netherlands') Netherlands
+        option(value='United States') United States
       h2 Contact
       hr
       label(for='linkedin') LinkedIn account (url)

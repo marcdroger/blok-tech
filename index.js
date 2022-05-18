@@ -4,7 +4,9 @@ const app = express();
 const multer = require('multer');
 const upload = multer({ dest: 'public/upload'});
 
-const port = 3000;
+const mongo = require('mongodb');
+
+const port = process.env.DB_PORT || 3000;
 
 require('dotenv').config();
 
@@ -14,10 +16,19 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//TODO: add validator
 
+
+const url = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}`
+
+mongo.MongoClient.connect(url, (err, client) => {
+  if (err) throw err
+  db = client.db(process.env.DB_NAME)
+  console.log('connect');
+})
+
+//TODO: add validator data later?
 app.post('/account', upload.single('avatar'), (req, res) => {
-  console.log(req.body)
+  console.log(req.body);
 
   //TODO: add account update succes or error messages
   //res.redirect('back');
