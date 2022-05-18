@@ -5,6 +5,19 @@ block content
     h1 Overview
     p Students found in (preference country)
   main
+    div#map
+    script.
+      mapboxgl.accessToken = 'pk.eyJ1IjoibWFyY2Ryb2dlciIsImEiOiJjbDNiYzFtNnMwZHlhM2NycXdkdGh2MTZmIn0.B26KwzBntG-ArQRPsYBu6Q';
+
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v10',
+        center: [0, -10],
+        zoom: 1
+      });
+
+      map.addControl(new mapboxgl.FullscreenControl());
+
     //- TODO: add fallback message if no entries
     ul.overview
       li

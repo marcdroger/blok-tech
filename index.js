@@ -3,11 +3,13 @@ const app = express();
 
 const port = 3000;
 
+require('dotenv').config()
+
 //use static public directory
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 //set templating engine to pug
-app.set('view engine', 'pug')
+app.set('view engine', 'pug');
 
 //render index page
 app.get('/', (req, res) => {
@@ -27,3 +29,4 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`express running on port ${port}`);
 })
+
