@@ -1,19 +1,30 @@
 input[type='text'],
 input[type='password'],
+input[type='url'],
 select {
-  border: 2px solid var(--color-black);
+  border: 2px solid var(--color-primary);
   padding: 8px;
   font-size: 16px;
   margin-top: 6px;
 }
 
+input[type='text'] {
+  text-transform: capitalize;
+}
+
 input[type='submit'] {
   border: none;
-  background-color: var(--color-black);
+  background-color: var(--color-primary);
+  cursor: pointer;
   padding: 15px 25px;
   color: var(--color-white);
   font-size: 16px;
   margin-top: 16px;
+  transition: 0.1s ease-in-out background-color;
+}
+
+input[type='submit']:hover {
+  background-color: #000;
 }
 
 /* avatar */

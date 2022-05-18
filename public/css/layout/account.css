@@ -16,7 +16,6 @@
 .account input,
 .account select {
   margin-bottom: 10px;
-  text-transform: capitalize;
 }
 
 .account label {
