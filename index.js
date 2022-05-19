@@ -50,6 +50,8 @@ app.set('view engine', 'pug');
 app.get('/', async (req, res) => {
   //const students = await db.collection('students').find({},{}).toArray();
 
+  console.log(students)
+
   res.render('index');
 })
 
@@ -68,6 +70,6 @@ app.listen(port, () => {
   console.log(`express running on port ${port}`);
 
   //check if mongoDB connection succes
-  //connectMongo().then(console.log('Connected to MongoDB'));
+  connectMongo().then(console.log('Connected to MongoDB'));
 })
 

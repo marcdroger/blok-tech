@@ -132,6 +132,3 @@ dist
 # Mac OS
 .DS_Store
 **/.DS_Store
-
-#ignore avatar uploads folder
-/public/upload/*
