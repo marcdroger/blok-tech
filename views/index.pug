@@ -3,7 +3,7 @@ extends layout/template.pug
 block content
   header
     h1 Overview
-    p Students found in (preference country)
+    p Students found in (preference country) who want to study in your country
   main
     div#map
     script.
@@ -21,13 +21,9 @@ block content
     //- TODO: add fallback message if no entries
     ul.overview
       li
-        img(src='/images/avatar.jpg' alt='avatar')
         h2 jonathan langeachternaam
         div
           p Communications and Multimedia Design
-          p Amsterdam University of Applied Sciences
+            span - Amsterdam University of Applied Sciences
         div
-          a(href='https://linkedin.com')
-            img(src="/images/linkedin.svg" alt="linkedin contact" target='_blank')
-          a(href='https://instagram.com')
-            img(src="/images/instagram.svg" alt="instagram contact" target='_blank')
+          a(href='mailto:marcdroger@hotmail.com') Email

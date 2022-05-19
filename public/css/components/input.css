@@ -1,5 +1,6 @@
 input[type='text'],
 input[type='password'],
+input[type='email'],
 input[type='url'],
 select {
   border: 2px solid var(--color-primary);

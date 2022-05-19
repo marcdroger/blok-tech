@@ -1,12 +1,10 @@
 # TODO
 
 - Heroku build werken krijgen.
-- pas account gegevens aan (body-parser)
-- install mongoDB and setup in project (mongoose?)
-- Whitelist IP windows pc thuis in Mongo Atlas
+- Test read en update information mongoDB later
 - Prettier & Eslint opzetten in project? (airbnb styleguide)
 - Voeg sass toe in project? (webpack)
-- Voeg mapbox api toe zodat interactieve kaart in project zit.
+- Geolocatie scholen later in mapbox implementeren.
 
 ## Requirements
 

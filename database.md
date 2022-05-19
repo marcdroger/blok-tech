@@ -2,22 +2,12 @@
 
 structure for the database
 
-## User
+## student
 
 - id (number)
 - firstname (string)
 - lastname (string)
-- education? (string)
+- email (string)
+- education (string)
 - school (string)
-- country/school preference (string)
-- profile picture? (image)
-- social media
-
-## schools
-
-- id (number)
-- name (string)
-- country (string)
-- city (string)
-- location y (float)
-- location x (float)
+- country preference (string)

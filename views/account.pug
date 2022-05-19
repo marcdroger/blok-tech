@@ -4,15 +4,15 @@ block content
   header
     h1 Account
   main
-    form.account(action='/account' method='post' enctype='multipart/form-data')
-      img(src='./images/avatar.jpg' alt='avatar name')
-      input(type='file' name='avatar' accept='image/*')
+    form.account(action='/account' method='post')
       h2 General Info
       hr
       label(for='firstname') First Name
       input(type='text' name='firstname' id='firstname' required)
       label(for='lastname') Last name
       input(type='text' placeholder='' name='lastname' id='lastname' required)
+      label(for='email') E-mailadres (used for contact)
+      input(type="email" placeholder='' name='email' id='email')
       h2 Education
       hr
       label(for='education') Current study
@@ -20,10 +20,10 @@ block content
       label(for='school') Current School
       select(name='school' id='school')
         option(value='Harvard University') Harvard University
-        option(value='Hogeschool van Rotterdam') Hogeschool van Rotterdam
-        option(value='Hogeschool van Amsterdam') Hogeschool van Amsterdam
+        option(value='Erasmus Universiteit Rotterdam') Erasmus Universiteit Rotterdam
+        option(value='University of Amsterdam') University of Amsterdam
         option(value='Kyoto University') Kyoto University
-        option(value='University of Toronto') University of Toronto
+        option(value='Ryerson University') Ryerson University
       label(for='country') Country preference
       select(name='country' id='country')
         option(value='Canada') Canada
@@ -31,11 +31,5 @@ block content
         option(value='Japan') Japan
         option(value='Netherlands') Netherlands
         option(value='United States') United States
-      h2 Contact
-      hr
-      label(for='linkedin') LinkedIn account (url)
-      input(type='url' placeholder='' name='linkedin' id='linkedin' pattern="https://.*")
-      label(for='instagram') Instagram account (url)
-      input(type='url' placeholder='' name='instagram' id='instagram' pattern="https://.*")
 
       input(type='submit' value='Update profile')
