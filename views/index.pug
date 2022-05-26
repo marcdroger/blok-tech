@@ -7,7 +7,8 @@ block content
   main
     div#map
     script.
-      mapboxgl.accessToken = 'pk.eyJ1IjoibWFyY2Ryb2dlciIsImEiOiJjbDNiYzFtNnMwZHlhM2NycXdkdGh2MTZmIn0.B26KwzBntG-ArQRPsYBu6Q';
+      //FIXME: put API key in env
+      mapboxgl.accessToken = '#{mapboxAPI}';
 
       const map = new mapboxgl.Map({
         container: 'map',

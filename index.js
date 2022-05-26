@@ -1,15 +1,17 @@
 const express = require('express');
-
 const { MongoClient, ObjectId } = require('mongodb');
-
 const app = express();
-
-const port = process.env.DB_PORT || 3000;
-
-let db = null;
 
 //require the dotenv package for dotenv variables
 require('dotenv').config();
+
+//environment variables
+const port = process.env.DB_PORT || 3000;
+const uri = process.env.DB_URI;
+const db = process.env.DB_DATABASE;
+const collection = process.env.DB_COLLECTION;
+const mapboxAPI = process.env.MAPBOX_KEY;
+
 
 //use static public directory
 app.use(express.static('public'));
@@ -29,15 +31,13 @@ app.post('/account', (req, res) => {
 
 //connect to MongoDB database
 async function connectMongo() {
-  const uri = process.env.DB_URI;
-
   const client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
   try {
     await client.connect();
-    db = client.db(process.env.DB_DATABASE);
+    client.db(process.env.DB_DATABASE);
   } catch (error) {
     throw error;
   }
@@ -48,11 +48,13 @@ app.set('view engine', 'pug');
 
 //render index page
 app.get('/', async (req, res) => {
-  //const students = await db.collection('students').find({},{}).toArray();
+  //const students = await db.collection(process.env.DB_COLLECTION).find({},{}).toArray();
 
-  console.log(students)
+  //console.log(students)
 
-  res.render('index');
+  res.render('index', {
+    mapboxAPI
+  });
 })
 
 //render account page
@@ -70,6 +72,6 @@ app.listen(port, () => {
   console.log(`express running on port ${port}`);
 
   //check if mongoDB connection succes
-  connectMongo().then(console.log('Connected to MongoDB'));
+  //connectMongo().then(console.log('Connected to MongoDB'));
 })
 
