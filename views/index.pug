@@ -7,9 +7,7 @@ block content
   main
     div#map
     script.
-      //FIXME: put API key in env
       mapboxgl.accessToken = '#{mapboxAPI}';
-
       const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
@@ -19,7 +17,7 @@ block content
 
       map.addControl(new mapboxgl.FullscreenControl());
 
-    //- TODO: add fallback message if no entries
+    //- TODO: add fallback message if no entries?
     ul.overview
       li
         h2 jonathan langeachternaam

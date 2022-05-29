@@ -3,6 +3,8 @@
   "description": "Blok Tech repo for CMD Tech at HvA",
   "version": "0.0.1",
   "author": "Marc Droger",
+  "license": "MIT",
+  "keywords": ["Blok Tech", "HvA", "CMD"],
   "repository": "marcdroger/blok-tech",
   "main": "index.js",
   "engines": {
