@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const { MongoClient, ObjectId } = require('mongodb');
+const { MongoClient } = require('mongodb');
 
 //use static public directory
 app.use(express.static('public'));
@@ -26,7 +26,8 @@ app.set('view engine', 'pug');
 
 //render index page
 app.get('/', async (req, res) => {
-  const students = await db.collection(collection).find({},{}).toArray();
+  //get students data but skip first entry because that's the main user
+  const students = await db.collection(collection).find({},{}).skip(1).toArray();
 
   res.render('index', {
     mapboxAPI, students
@@ -45,11 +46,30 @@ app.get('/account', async (req, res) => {
 })
 
 //TODO: add validator data later?
-app.post('/account', (req, res) => {
-  console.log(req.body);
+app.post('/account', async (req, res) => {
 
-  //TODO: add account update succes or error messages
-  //res.redirect('back');
+  //get parameter values from account form
+  const firstname = req.body.firstname;
+  const lastname = req.body.lastname;
+  const email = req.body.email;
+  const education = req.body.education;
+  const currentSchool = req.body.school;
+  const countryPreference = req.body.country;
+
+  //update first entry
+  await db.collection(collection).updateOne({},
+    {$set: {
+      firstname: firstname,
+      lastname: lastname,
+      email: email,
+      education: education,
+      currentSchool:
+      currentSchool,
+      countryPreference: countryPreference
+  }});
+
+  //refresh page
+  res.redirect('back');
 })
 
 //render 404 page
