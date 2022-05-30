@@ -1,16 +1,15 @@
 header {
   background-color: var(--color-primary);
   text-align: center;
-  padding: 140px 0 70px;
+  padding: 100px 0 30px;
 }
 
 header h1 {
   color: var(--color-white);
 }
 
-/* FIXME: place main in different css file? */
-main {
-  margin: 30px auto 0;
-  max-width: 1200px;
-  padding: 0 16px;
+@media screen and (min-width: 768px) {
+  header {
+    padding: 140px 0 70px;
+  }
 }
