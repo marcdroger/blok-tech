@@ -20,8 +20,6 @@ block content
       each student in students
         li
           h2= student.firstname
-          div
-            p= student.education
-            p= student.currentSchool
-          div
-            a(href='mailto:' + student.email) Email
+          p= student.education
+          p= student.currentSchool
+          a(href='mailto:' + student.email) Email
