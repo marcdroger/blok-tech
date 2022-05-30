@@ -1,15 +1,10 @@
 header {
   background-color: var(--color-primary);
   text-align: center;
-  padding: 120px 0 50px;
+  padding: 140px 0 70px;
 }
 
 header h1 {
-  color: var(--color-white);
-  margin: 10px 0;
-}
-
-header p {
   color: var(--color-white);
 }
 

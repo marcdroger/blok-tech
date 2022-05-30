@@ -3,7 +3,6 @@ extends layout/template.pug
 block content
   header
     h1 Overview
-    p Students found in (preference country) who want to study in your country
   main
     div#map
     script.
@@ -17,12 +16,12 @@ block content
 
       map.addControl(new mapboxgl.FullscreenControl());
 
-    //- TODO: add fallback message if no entries?
     ul.overview
-      li
-        h2 jonathan langeachternaam
-        div
-          p Communications and Multimedia Design
-            span - Amsterdam University of Applied Sciences
-        div
-          a(href='mailto:marcdroger@hotmail.com') Email
+      each student in students
+        li
+          h2= student.firstname
+          div
+            p= student.education
+              span= student.currentSchool
+          div
+            a(href='mailto:' + student.email) Email
