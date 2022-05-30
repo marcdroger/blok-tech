@@ -8,15 +8,15 @@ block content
       h2 General Info
       hr
       label(for='firstname') First name
-      input(type='text' name='firstname' id='firstname' required)
+      input(type='text' name='firstname' id='firstname' placeholder=student.firstname required)
       label(for='lastname') Last name
-      input(type='text' placeholder='' name='lastname' id='lastname' required)
+      input(type='text' name='lastname' id='lastname' placeholder=student.lastname required)
       label(for='email') E-mailadres (used for contact)
-      input(type="email" placeholder='' name='email' id='email')
+      input(type="email" placeholder=student.email name='email' id='email')
       h2 Education
       hr
       label(for='education') Current study
-      input(type='text' placeholder='' name='education' id='education' required)
+      input(type='text' name='education' id='education' placeholder=student.education required)
       label(for='school') Current school
       select(name='school' id='school')
         option(value='Harvard University') Harvard University

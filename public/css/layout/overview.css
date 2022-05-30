@@ -15,10 +15,6 @@
   margin: 8px 0;
 }
 
-.overview div p span {
-  color: var(--color-gray);
-}
-
 .overview div:last-child {
   margin-top: 8px;
 }

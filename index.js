@@ -33,11 +33,15 @@ app.get('/', async (req, res) => {
   });
 })
 
-
-
 //render account page
-app.get('/account', (req, res) => {
-  res.render('account');
+app.get('/account', async (req, res) => {
+  const student = await db.collection(collection).findOne({},{});
+
+  console.log(student)
+
+  res.render('account', {
+    student
+  });
 })
 
 //TODO: add validator data later?
