@@ -38,8 +38,6 @@ app.get('/', async (req, res) => {
 app.get('/account', async (req, res) => {
   const student = await db.collection(collection).findOne({},{});
 
-  console.log(student)
-
   res.render('account', {
     student
   });
