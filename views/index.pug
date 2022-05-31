@@ -13,9 +13,15 @@ block content
             p= student.currentSchool
             a(href='mailto:' + student.email) Email
     div#map
+
     script.
+      //array for coordinates & names students later used for generating markers
+      let features = [];
+
+      //acces token for mapbox
       mapboxgl.accessToken = '#{mapboxAPI}';
 
+      //generate mapbox map and style
       const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
@@ -23,4 +29,46 @@ block content
         zoom: 1.2
       });
 
-      map.addControl(new mapboxgl.FullscreenControl());
+      //this function loads the students data from the students route that are
+      //needed for the markers and popups on the map
+      map.on('load', async () => {
+        const response = await fetch('/students');
+        const data = await response.json();
+
+        //generate coordinates universites and student info to to features array
+        data.forEach((student) => {
+          feature = {
+            'type': 'Feature',
+            'geometry': {
+              'type': 'Point',
+              'coordinates': [ student.longitude, student.latitude ]
+            },
+            'properties': {
+              'title': `${student.firstname} ${student.lastname}`,
+            }
+          }
+          features.push(feature)
+        })
+
+        //add the features array with students data to the map
+        map.addSource("students", {
+          'type': 'geojson',
+          'data': {
+            'type': 'FeatureCollection',
+            'features': features
+          }
+        })
+
+        //generate markers and popups for the map using the coordinates and info
+        //from the features array
+        features.forEach((marker) => {
+          let popup = new mapboxgl.Popup().setHTML(`<h2> ${marker.properties.title} </h2>`);
+
+          new mapboxgl.Marker().setLngLat(marker.geometry.coordinates).setPopup(popup).addTo(map);
+        })
+
+        //add fullscreen toggle button for the map
+        map.addControl(new mapboxgl.FullscreenControl());
+      })
+
+

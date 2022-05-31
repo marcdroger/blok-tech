@@ -34,6 +34,14 @@ app.get('/', async (req, res) => {
   });
 })
 
+//route for exporting data used in the mapbox
+app.get('/students', async (req, res) => {
+  //get students data but skip first entry because that's the main user
+  const students = await db.collection(collection).find({},{}).skip(1).toArray();
+
+  res.json(students)
+})
+
 //render account page
 app.get('/account', async (req, res) => {
   const student = await db.collection(collection).findOne({},{});
@@ -93,4 +101,3 @@ app.listen(port, () => {
   //check if mongoDB connection succes
   connectDB().then(console.log('Connected to MongoDB'));
 })
-
