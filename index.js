@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 require('dotenv').config();
 
 //environment variables
-const port = process.env.DB_PORT || 3000;
+const port = process.env.PORT || 3000;
 const url = process.env.DB_URI;
 const databaseName = process.env.DB_DATABASE;
 const collection = process.env.DB_COLLECTION;
