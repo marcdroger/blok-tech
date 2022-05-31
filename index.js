@@ -61,8 +61,7 @@ app.post('/account', async (req, res) => {
       lastname: lastname,
       email: email,
       education: education,
-      currentSchool:
-      currentSchool,
+      currentSchool: currentSchool,
       countryPreference: countryPreference
   }});
 
