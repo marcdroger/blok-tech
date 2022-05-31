@@ -43,9 +43,7 @@ app.get('/account', async (req, res) => {
   });
 })
 
-//TODO: add validator data later?
 app.post('/account', async (req, res) => {
-
   //get parameter values from account form
   const firstname = req.body.firstname;
   const lastname = req.body.lastname;
