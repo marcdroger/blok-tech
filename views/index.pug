@@ -4,13 +4,14 @@ block content
   header
     h1 Overview
   main
+    //-The fallback for the progressive enhancement when javascript is disabled in the browser
     noscript
       ul.overview
         each student in students
           li
             h2= `${student.firstname} ${student.lastname}`
-            p= student.education
-            p= student.currentSchool
+            p= `Studying: ${student.education}`
+            p= `School: ${student.currentSchool}`
             a(href='mailto:' + student.email) Email
     div#map
 
@@ -45,6 +46,9 @@ block content
             },
             'properties': {
               'title': `${student.firstname} ${student.lastname}`,
+              'education': `${student.education}`,
+              'school': `${student.currentSchool}`,
+              'email': `${student.email}`
             }
           }
           features.push(feature)
@@ -62,13 +66,20 @@ block content
         //generate markers and popups for the map using the coordinates and info
         //from the features array
         features.forEach((marker) => {
-          let popup = new mapboxgl.Popup().setHTML(`<h2> ${marker.properties.title} </h2>`);
+          //popup layout
+          let popup = new mapboxgl.Popup().setHTML(`
+            <div class='popup'>
+              <h2>${marker.properties.title}</h2>
+              <p>Studying: ${marker.properties.education}</p>
+              <p>School: ${marker.properties.school}</p>
+              <a href='mailto:${marker.properties.email}'>Email</a>
+            </div>
+          `);
 
+          //generate marker at coordinates from features array including a popup
           new mapboxgl.Marker().setLngLat(marker.geometry.coordinates).setPopup(popup).addTo(map);
         })
 
         //add fullscreen toggle button for the map
         map.addControl(new mapboxgl.FullscreenControl());
       })
-
-

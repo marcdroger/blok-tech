@@ -8,6 +8,7 @@
 @import './components/font.css';
 @import './components/input.css';
 @import './components/map.css';
+@import './components/popup.css';
 
 /* import layout */
 @import './layout/nav.css';
