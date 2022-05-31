@@ -19,12 +19,13 @@ Dit project is gemaakt voor project tech voor de opleiding CMD op de HvA.
 
 Om het project te kunnen opzetten moet je Node en NPM geïnstalleerd hebben op je systeem.
 
+Het is ook aanbevolen om VScode als code editor te gebruiken en de extensies Eslint en Stylelint te hebben.
+
 Ook moet je toegang hebben tot MongoDB Atlas database zodat je een connectie url kan generen. Neem daarvoor met mij contact op.
 
-Uiteindelijk moet je in `env.sample` de connectie key toevoegen en nog meer. Ook moet je een account hebben op mapbox zodat je de interactieve mapbox kaart kan gebruiken.
+Uiteindelijk moet je in `env.sample` dan de connectie key toevoegen en nog meer gegevens van de database. Ook moet je een account hebben op mapbox zodat je de interactieve mapbox kaart kan gebruiken (of ik kan mijn key met je delen).
 
 Als dat gelukt is dan kan je het project clonen.
-
 
 ```bash
 # install dependencies

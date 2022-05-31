@@ -1,7 +1,6 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "string-quotes": "single",
-    "font-family-name-quotes": null
+    "string-quotes": "single"
   }
 }

@@ -7,7 +7,3 @@ footer a {
   color: var(--color-primary);
   text-decoration: underline;
 }
-
-footer a:hover {
-  color: var(--color-black);
-}
