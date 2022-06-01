@@ -37,7 +37,7 @@ $ npm start
 
 ## Acknowledgement
 
-Tijdens het project heb ik meerdere resources en services gebruikt die het mogelijk hebben gemaakt om dit project tot stand te brengen.
+Tijdens het project heb ik meerdere resources en services gebruikt die het mogelijk hebben gemaakt om dit project tot stand te brengen. (Deze bronnen zijn niet in APA stijl omdat het geen publicaties zijn maar algemene documentatie platformen.)
 
 - [Mapbox](https://www.mapbox.com/)
 - [Google Fonts](https://fonts.google.com/)
