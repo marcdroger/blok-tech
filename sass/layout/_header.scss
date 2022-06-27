@@ -1,0 +1,13 @@
+header {
+  background-color: $primary;
+  text-align: center;
+  padding: 100px 0 30px;
+
+  @media screen and (min-width: $viewport-sm) {
+    padding: 140px 0 70px;
+  }
+
+  h1 {
+    color: $white;
+  }
+}

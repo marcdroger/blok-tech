@@ -1,0 +1,23 @@
+.account {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+
+  h2 {
+    margin-top: 10px;
+  }
+
+  hr {
+    margin-bottom: 8px;
+  }
+
+  input,
+  select {
+    margin-bottom: 10px;
+  }
+
+  label {
+    margin-top: 2px;
+  }
+}

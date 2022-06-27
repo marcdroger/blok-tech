@@ -8,15 +8,15 @@
   text-align: center;
   margin: 0;
   width: 80%;
-}
 
-.error h1 {
-  font-size: 35px;
-  margin-bottom: 12px;
-}
+  h1 {
+    font-size: 35px;
+    margin-bottom: 12px;
+  }
 
-.error a {
-  color: var(--color-primary);
-  margin-top: 10px;
-  text-decoration: underline;
+  a {
+    color: $primary;
+    margin-top: 10px;
+    text-decoration: underline;
+  }
 }
