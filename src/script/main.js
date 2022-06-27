@@ -1,3 +1,5 @@
+const locationElement = document.getElementById('location');
+
 //array for coordinates & names students later used for generating markers
 let features = [];
 
@@ -65,3 +67,19 @@ map.on('load', async () => {
   //add fullscreen toggle button for the map
   map.addControl(new mapboxgl.FullscreenControl());
 })
+
+if(locationElement) {
+  getCurrentLocation();
+}
+
+function getCurrentLocation() {
+  if(navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else {
+    locationElement.innerHTML = `Can't get current location`;
+  }
+}
+
+function showPosition(position) {
+  locationElement.innerHTML = `Lat: ${position.coords.latitude} Long: ${position.coords.longitude}`;
+}

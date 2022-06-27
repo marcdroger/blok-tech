@@ -27,6 +27,7 @@ gulp.task('compress', function () {
 
 // Watch if sass files changes then run styles task.
 //uncomment if you work on sass.
-gulp.watch('./sass/**/*.scss', gulp.series(['styles', 'compress']));
+gulp.watch('./src/sass/**/*.scss', gulp.series('styles'));
+gulp.watch('./src/script/*.js', gulp.series('compress'));
 
 gulp.task('default', gulp.series(['styles', 'compress']));
