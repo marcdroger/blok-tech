@@ -17,7 +17,6 @@ const port = process.env.PORT || 3000;
 const url = process.env.DB_URI;
 const databaseName = process.env.DB_DATABASE;
 const collection = process.env.DB_COLLECTION;
-const mapboxAPI = process.env.MAPBOX_KEY;
 
 let db;
 
@@ -29,9 +28,7 @@ app.get('/', async (req, res) => {
   //get students data but skip first entry because that's the main user
   const students = await db.collection(collection).find({},{}).skip(1).toArray();
 
-  res.render('index', {
-    mapboxAPI, students
-  });
+  res.render('index', { students });
 })
 
 //route for exporting data used in the mapbox
