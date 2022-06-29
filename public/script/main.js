@@ -7,8 +7,10 @@ let features = [];
 //acces token for mapbox
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFyY2Ryb2dlciIsImEiOiJjbDNiYzFtNnMwZHlhM2NycXdkdGh2MTZmIn0.B26KwzBntG-ArQRPsYBu6Q';
 
+//if page is done loading
 window.onload = getCurrentLocation();
 
+//get current location of user
 function getCurrentLocation() {
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -17,8 +19,13 @@ function getCurrentLocation() {
   }
 }
 
+//replace href with openstreet map link showing the user location
 function showPosition(position) {
-  locationElement.innerHTML = `Lat: ${position.coords.latitude} Long: ${position.coords.longitude}`;
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+
+  locationElement.innerHTML = `Check where you are from`;
+  locationElement.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
 }
 
 if(mapElement) {
